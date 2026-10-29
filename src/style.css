@@ -1,0 +1,387 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fafafa;
+  color: #1a1a1a;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+/* Link styles */
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1a1a1a;
+}
+
+/* Button hover effects */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Card hover effects */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Form controls */
+.form-control,
+.form-select {
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #1a1a1a;
+  box-shadow: 0 0 0 0.2rem rgba(26, 26, 26, 0.1);
+}
+
+/* Image styles */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Section spacing */
+section {
+  position: relative;
+}
+
+/* Container utility */
+.container {
+  max-width: 1200px;
+}
+
+/* Text utilities */
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.fw-light {
+  font-weight: 300;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+/* Animation utilities */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.75rem !important;
+  }
+  
+  h3 {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Navbar specific styles */
+.navbar-brand {
+  font-weight: 700 !important;
+  letter-spacing: 2px;
+}
+
+.nav-link {
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+}
+
+/* Footer link hover */
+footer a:hover {
+  color: #fff !important;
+}
+
+/* Product card specific */
+.product-card-image {
+  overflow: hidden;
+}
+
+.product-card-image img {
+  transition: transform 0.5s ease;
+}
+
+.product-card-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Rating stars */
+.rating-star {
+  color: #ffc107;
+}
+
+/* Spacing utilities */
+.mb-5 {
+  margin-bottom: 3rem !important;
+}
+
+.py-5 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+/* Shadow utilities */
+.shadow-sm {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+.shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Badge styles */
+.badge {
+  padding: 0.35em 0.65em;
+  font-weight: 600;
+}
+
+/* Loading spinner */
+.spinner-border {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Modal styles */
+.modal-content {
+  border-radius: 8px;
+  border: none;
+}
+
+.modal-header {
+  border-bottom: 1px solid #eee;
+}
+
+.modal-footer {
+  border-top: 1px solid #eee;
+}
+
+/* Alert styles */
+.alert {
+  border-radius: 8px;
+  border: none;
+}
+
+/* Table styles */
+.table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table thead th {
+  border-bottom: 2px solid #eee;
+  font-weight: 600;
+}
+
+/* Toast styles */
+.toast {
+  border-radius: 8px;
+  border: none;
+}
+
+/* Progress bar */
+.progress {
+  height: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+/* Accordion */
+.accordion-button:not(.collapsed) {
+  background-color: #f5f5f5;
+  color: #1a1a1a;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(26, 26, 26, 0.1);
+}
+
+/* Breadcrumb */
+.breadcrumb-item a {
+  color: #666;
+}
+
+.breadcrumb-item.active {
+  color: #1a1a1a;
+}
+
+/* Pagination */
+.page-link {
+  color: #1a1a1a;
+  border-color: #ddd;
+}
+
+.page-link:hover {
+  color: #1a1a1a;
+  background-color: #f5f5f5;
+  border-color: #ddd;
+}
+
+.page-item.active .page-link {
+  background-color: #1a1a1a;
+  border-color: #1a1a1a;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+
+/* Tooltip */
+.tooltip-inner {
+  background-color: #1a1a1a;
+  border-radius: 4px;
+}
+
+/* Offcanvas */
+.offcanvas {
+  background-color: #fff;
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid #eee;
+}
+
+.offcanvas-footer {
+  border-top: 1px solid #eee;
+}
+
+/* Card deck */
+.card-deck {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 576px) {
+  .card-deck {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  
+  .card-deck .card {
+    flex: 1 0 0%;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+
+/* Utility classes */
+.text-gradient {
+  background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient {
+  background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+}
+
+.border-radius-lg {
+  border-radius: 12px;
+}
+
+.border-radius-xl {
+  border-radius: 16px;
+}
+
+/* Print styles */
+@media print {
+  .navbar,
+  .footer,
+  .btn {
+    display: none !important;
+  }
+  
+  body {
+    background-color: #fff;
+  }
+}
